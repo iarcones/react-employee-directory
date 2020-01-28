@@ -1,5 +1,6 @@
 import React from "react";
-import SearchBox from "./SearchBox.js";
+import SearchName from "./SearchName.js";
+import SearchDOB from "./SearchDOB.js";
 import "../styles/Nav.css";
 
 function Nav() {
@@ -17,17 +18,11 @@ function Nav() {
         <span className="navbar-toggler-icon" />
       </button>
       <div className="collapse navbar-collapse row" id="navbarNav">
-        <div className="input-group col-8">
-          <div className="input-group-prepend">
-            <span className="input-group-text" id="">
-              DOB
-            </span>
-          </div>
-          <input type="date" className="form-control" />
-          <input type="date" className="form-control" />
-        </div>
+        {/* <div className="input-group col-8">
+          <SearchDOB />
+        </div> */}
         <div className="search-area col-4">
-          <SearchBox />
+          <SearchName />
         </div>
       </div>
     </nav>

@@ -80,8 +80,11 @@ const DataArea = () => {
   const handleSearchChange = event => {
     const filter = event.target.value;
     const filteredList = developerState.users.filter(item => {
-      let values = item.name.first.toLowerCase();
-      return values.indexOf(filter.toLowerCase()) !== -1;
+      let values = item.name.first.toLowerCase() + " " + item.name.last.toLowerCase();
+      console.log(filter, values)
+    if(values.indexOf(filter.toLowerCase()) !== -1){
+      return item
+    };
     });
 
     setDeveloperState({ ...developerState, filteredUsers: filteredList });
